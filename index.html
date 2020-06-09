@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+<object type="text/html" data="https://www.vmixcall.com/" width="75%" height="720">
+</object>
+
+	<img id="next" src="images\next.png" align="right">
+
+	<img id="back" src="images\back.png" align="right">
+	
+    
+
+<script>
+$("#next").mousedown(function(){
+$.get('http://127.0.0.1:8000/press/bank/5/2');});
+
+$(document).ready(function()
+{
+    $("#next").mouseup(function() 
+    {
+        $(this).attr("src", "images/next.png");
+    });
+    
+    $("#next").mousedown(function()
+    {
+        $(this).attr("src", "images/nextclick.png");
+    });
+});
+
+$("#back").mousedown(function(){
+$.get('http://127.0.0.1:8000/press/bank/5/3');});
+
+$(document).ready(function()
+{
+    $("#back").mouseup(function() 
+    {
+        $(this).attr("src", "images/back.png");
+    });
+    
+    $("#back").mousedown(function()
+    {
+        $(this).attr("src", "images/backclick.png");
+    });
+});
+
+
+
+</script>
+
+</body>
+</html>
