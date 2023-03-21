@@ -27,23 +27,7 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 	<img id="logo" src="https://raw.githubusercontent.com/bscav/Remote1/master/images/logo%20rozl%201%20alpha.png" width="125" height="89" align="right">
 	
@@ -109,6 +93,23 @@ $(document).ready(function()
     });
 });
 
+//-- tu trzeba zmienic przycisk back--//
+$("#take").mousedown(function(){
+fetch('https://bscav.ngrok.io/press/bank/1/4')
+;})
+
+$(document).ready(function()
+{
+    $("#take").mouseup(function() 
+    {
+        $(this).attr("src", "https://raw.githubusercontent.com/bscav/Remote1/master/images/logo%20rozl%201%20alpha.png");
+    });
+    
+    $("#take").mousedown(function()
+    {
+        $(this).attr("src", "https://raw.githubusercontent.com/bscav/Remote1/master/images/logo%20rozl%201%20alpha.png");
+    });
+});
 
 
 </script>
